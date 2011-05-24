@@ -1,0 +1,5 @@
+category: Web
+requires: libwkhtmltox0 libQtCore4-devel libQtGui4-devel libQtNetwork4-devel libQtSvg4-devel libQtWebKit4-devel
+sdesc: "Qt HTML to image converter library (development)"
+ldesc: "A simple command-line utility for converting HTML to PDF or images
+using the QtWebKit rendering engine."

@@ -1,0 +1,5 @@
+category: Web
+requires: libgcc1 libQtCore4 libQtGui4 libQtNetwork4 libQtSvg4 libQtWebKit4 libstdc++6
+sdesc: "Qt HTML to image converter library (runtime)"
+ldesc: "A simple command-line utility for converting HTML to PDF or images
+using the QtWebKit rendering engine."

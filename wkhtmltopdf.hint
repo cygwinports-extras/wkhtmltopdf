@@ -1,0 +1,5 @@
+category: Web
+requires: libgcc1 libQtCore4 libQtGui4 libstdc++6 libwkhtmltox0
+sdesc: "Converts HTML to PDF or image file"
+ldesc: "A simple command-line utility for converting HTML to PDF or images
+using the QtWebKit rendering engine."
