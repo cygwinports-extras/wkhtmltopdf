@@ -1,7 +1,7 @@
 inherit qt4-qmake
 
 NAME="wkhtmltopdf"
-VERSION=0.10.0_rc2
+VERSION=0.11.0_rc1
 RELEASE=1
 CATEGORY="Web"
 SUMMARY="Converts HTML to PDF or image file"
@@ -18,11 +18,13 @@ libwkhtmltox0_SUMMARY="Qt HTML to image converter library"
 libwkhtmltox0_CONTENTS="usr/bin/cygwkhtmltox-0.dll"
 libwkhtmltox_devel_CATEGORY="Libs"
 libwkhtmltox_devel_SUMMARY=${libwkhtmltox0_SUMMARY}
+libwkhtmltox_devel_REQUIRES="libQtCore4-devel libQtGui4-devel libQtNetwork4-devel libQtSvg4-devel libQtWebKit4-devel"
 libwkhtmltox_devel_CONTENTS="usr/include/ usr/lib/"
 
 src_compile() {
 	cd ${B}
-	cygqmake4 ${S}/${NAME}.pro INSTALLBASE=/usr
+	lndirs
+	cygqmake4 ${NAME}.pro INSTALLBASE=/usr CONFIG+=no_fixpath
 	cygmake
 	cygmake manins -C src/image
 	cygmake manins -C src/pdf
